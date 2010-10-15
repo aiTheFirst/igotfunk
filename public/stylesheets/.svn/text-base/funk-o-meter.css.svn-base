@@ -1,0 +1,85 @@
+
+
+.slider {
+	
+	position: absolute;
+	-moz-border-radius-topright: 4px; 
+	-webkit-border-top-right-radius: 4px; 
+	-moz-border-radius-topleft: 5px; 
+	-webkit-border-top-left-radius: 5px;  
+	background-color: #FFFFFF; 
+	width: 40px;
+	
+
+}
+
+
+.slider-container {
+	
+position: absolute; 
+	height: 150px; 
+	border: 2px solid #555261 ; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	width: 40px; 
+	background: url('/images/barbackbig.bmp') repeat-y;
+}
+
+.slider-track {
+	position: absolute; 
+	height: 150px; 
+	width: 40px;
+}
+
+.slider-handle {
+	position: absolute; 
+	width: 47px; 
+	height: 4px;
+
+}
+
+.slider-handle img {
+	float: right;
+	width: 15px;
+	height: 15px;
+	margin-top: -6px;
+
+}
+
+.tiny-slider {
+	position: absolute;
+	-moz-border-radius-topright: 4px; 
+	-webkit-border-top-right-radius: 4px; 
+	-moz-border-radius-topleft: 5px; 
+	-webkit-border-top-left-radius: 5px;  
+	background-color: #FFFFFF; 
+	width: 22px;
+	
+}
+
+
+.tiny-slider-container {
+	position: absolute; 
+	height: 80px; 
+	border: 2px solid #555261 ; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	width: 22px; 
+	background: url('/images/barbackbig.bmp') repeat-y;
+	
+	
+
+}
+
+.tiny-slider-track {
+	position: absolute; 
+	height: 80px; 
+	width: 22px;
+}
+
+.tiny-slider-handle {
+	position: absolute; 
+	width: 47px; 
+	height: 4px;
+
+}

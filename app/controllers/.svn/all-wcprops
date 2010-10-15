@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/10/trunk/app/controllers
+END
+rankings_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/app/controllers/rankings_controller.rb
+END
+tags_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/10/trunk/app/controllers/tags_controller.rb
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/10/trunk/app/controllers/application.rb
+END
+chart_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/10/trunk/app/controllers/chart_controller.rb
+END
+users_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/10/trunk/app/controllers/users_controller.rb
+END
+status_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10/trunk/app/controllers/status_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/10/trunk/app/controllers/application_controller.rb
+END
+story_categories_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/10/trunk/app/controllers/story_categories_controller.rb
+END
+story_comments_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/10/trunk/app/controllers/story_comments_controller.rb
+END
+sessions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/app/controllers/sessions_controller.rb
+END
+stories_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/10/trunk/app/controllers/stories_controller.rb
+END
+home_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/10/trunk/app/controllers/home_controller.rb
+END

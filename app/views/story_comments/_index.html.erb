@@ -1,0 +1,20 @@
+<% for comment in comments %>
+<div id="Photos"><img src="/images/sample.png" width="76" height="46" alt="" class="ImgBorder"></div>
+<div id="Content">
+	<%= comment.description %>
+</div>
+<div class="clear"></div>
+<div class="HorizontalLine"></div>
+<% end %>
+
+<% if comments.empty? %>
+<div id="Content">
+	There are no comments for this story.
+</div>
+<div class="clear"></div>
+<div class="HorizontalLine"></div>
+<% end %>
+
+<% if logged_in? %>
+<%= render_partial 'story_comments/new', nil, '@story_id' => story_id %>
+<% end %>

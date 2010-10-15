@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/18/trunk/test/fixtures
+END
+user_profiles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/18/trunk/test/fixtures/user_profiles.yml
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/18/trunk/test/fixtures/users.yml
+END
+user_types.yml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/18/trunk/test/fixtures/user_types.yml
+END
+story_sources.yml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/18/trunk/test/fixtures/story_sources.yml
+END
+story_source_id_filters.yml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/18/trunk/test/fixtures/story_source_id_filters.yml
+END
+story_categories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/18/trunk/test/fixtures/story_categories.yml
+END
+story_comments.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/18/trunk/test/fixtures/story_comments.yml
+END
+stories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/18/trunk/test/fixtures/stories.yml
+END
+story_source_filters.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/18/trunk/test/fixtures/story_source_filters.yml
+END
+story_tag_links.yml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/18/trunk/test/fixtures/story_tag_links.yml
+END
+statuses.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/18/trunk/test/fixtures/statuses.yml
+END
+rankings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/18/trunk/test/fixtures/rankings.yml
+END
+tags.yml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/18/trunk/test/fixtures/tags.yml
+END

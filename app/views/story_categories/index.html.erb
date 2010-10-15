@@ -1,0 +1,44 @@
+<div id="MainContent" class="VerticalDotLine"><!-- *** Start: MainContent ***-->
+	<div id="ContentBoxV">	
+		<%= will_paginate @stories %>
+		<% for story in @stories %>							
+		<div class="CategoryVideoRanking">
+			<%= render :partial => 'rankings/funk_o_meter',
+		            :locals => { :story_id => story.id,
+		                         :avg_score => story.funk_level,
+		                         :user_score => nil,
+		                         :mini => true
+		                       }
+		      %>
+		</div>
+			
+		<div class="CategoryVideoDetails">	
+			<a href="<%= view_story_path(:name => story.url_slug) %>"><span id="eventTitle"><%= story.name %></span></a><br />
+			
+			<%= story.description %><br />
+					
+			Views: <label id="L"><%= story.views %></label><br />
+			
+			Funk Level: <label id="L"><%= story.funk_level %></label><br />
+			
+			Source: <% if story.story_source.icon_filename != nil %><img src="/images/<%= story.story_source.icon_filename %>" alt="" align="absmiddle"><% else %><%= story.story_source.name %><% end %><br />
+			
+			Posted by: <label id="L"><a href="<%= view_user_path(:user_name => story.user.login) %>"><%= story.user.login %></a></label>													
+		</div>
+		
+		<div class="CategoryVideoPreview">
+			<img src="/images/defaultpreview.jpg" width="125" height="83" alt="">
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="HorizontalLine"></div>
+		<% end %>
+		
+		<%= will_paginate @stories %>
+		
+		<% unless @stories.length > 0 %>
+		No stories have been submitted in this category yet.
+		<% end %>
+	</div>
+</div>

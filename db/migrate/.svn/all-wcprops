@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/26/trunk/db/migrate
+END
+010_create_rankings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/26/trunk/db/migrate/010_create_rankings.rb
+END
+011_create_story_tag_links.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/26/trunk/db/migrate/011_create_story_tag_links.rb
+END
+004_create_statuses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/26/trunk/db/migrate/004_create_statuses.rb
+END
+020_wedjune01.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/26/trunk/db/migrate/020_wedjune01.rb
+END
+021_wedjune03.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/26/trunk/db/migrate/021_wedjune03.rb
+END
+018_add_new_sourceid.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/26/trunk/db/migrate/018_add_new_sourceid.rb
+END
+012_create_story_sources.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/26/trunk/db/migrate/012_create_story_sources.rb
+END
+002_create_story_categories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/26/trunk/db/migrate/002_create_story_categories.rb
+END
+015_create_user_profiles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/26/trunk/db/migrate/015_create_user_profiles.rb
+END
+019_anew_msnbc5.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/26/trunk/db/migrate/019_anew_msnbc5.rb
+END
+017_add_new_sources.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/26/trunk/db/migrate/017_add_new_sources.rb
+END
+016_add_thumbnail_to_stories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/26/trunk/db/migrate/016_add_thumbnail_to_stories.rb
+END
+003_create_stories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/26/trunk/db/migrate/003_create_stories.rb
+END
+007_create_story_comments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/26/trunk/db/migrate/007_create_story_comments.rb
+END
+014_create_story_source_filters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/26/trunk/db/migrate/014_create_story_source_filters.rb
+END
+001_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/26/trunk/db/migrate/001_create_users.rb
+END
+008_create_tags.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/26/trunk/db/migrate/008_create_tags.rb
+END
+005_create_user_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/26/trunk/db/migrate/005_create_user_types.rb
+END
+013_create_story_source_id_filters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/26/trunk/db/migrate/013_create_story_source_id_filters.rb
+END

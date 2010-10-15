@@ -1,0 +1,33 @@
+<div id="MainContent" class="VerticalDotLine"><!-- *** Start: MainContent ***-->
+	<div class="ContentBox">
+		<div class="LargeBoxTop"></div>
+		<div class="LargeBoxBg">
+			<div class="title">Join</div>
+			
+			<% form_for :user, @user, :url => create_user_path do |f| -%>
+			<div class="text">Username*<br /><%= f.text_field :login %></div>
+			<div class="text"><br />E-mail*<br /><%= f.text_field :email %></div>
+			<div class="text"><br />Password*<br /><%= f.password_field :password %></div>
+			<div class="text"><br />Confirm Password*<br /><%= f.password_field :password_confirmation %></div>
+			
+			<% fields_for :profile, @profile do |p|%>
+			<div class="text"><br /><br /></div>
+			<div class="text">Location<br /><%= p.text_field :location %></div>
+			<div class="text"><br />Website<br /><%= p.text_field :website %></div>
+			<div class="text"><br />Gender<br />Male<%= p.radio_button :gender, 'm' %> Female<%= p.radio_button :gender, 'f' %> Unspecified<%= p.radio_button :gender, 'u' %></div>
+			<div class="text"><br />Birthday<br /><%= p.text_field :birthday %><br /></div>
+			
+			<div class="text"><br />*Denotes a required field.</div>
+			
+			<% end %>
+			
+			<div class="text"><br /><%= submit_tag 'Sign up' %></div>
+			<% end -%>
+		</div>
+		<div class="LargeBoxBottom"></div>
+	</div>
+
+	<div class="clear" id="RightContainerSpaceTop"></div>
+	<div class="ContentBox">
+	</div>
+</div>

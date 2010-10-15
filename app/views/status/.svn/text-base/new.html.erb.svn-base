@@ -1,0 +1,2 @@
+<%= flash[:notice] %>
+<%= render_partial 'new', nil, '@status' => @status %>

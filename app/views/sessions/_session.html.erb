@@ -1,0 +1,13 @@
+<% if !logged_in? %>
+
+<% form_tag create_session_path do -%>
+<div class="text">Login<br /><%= text_field_tag 'login' %></div>
+<div class="text"><br />Password<br /><%= password_field_tag 'password' %></div>
+<div class="text"><br />Remember Me <%= check_box_tag 'remember_me' %></div>
+<div class="text"><br /><%= submit_tag 'Log in' %></div>
+<% end -%>
+
+
+<% else %>
+	<div class="text">You are logged in! <%= link_to 'Logout', logout_path %></div>
+<% end %>

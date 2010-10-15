@@ -1,0 +1,16 @@
+<div id="MainContent" class="VerticalDotLine"><!-- *** Start: MainContent ***-->
+	<div class="ContentBox">
+		<div class="LargeBoxTop"></div>
+		<div class="LargeBoxBg">
+			<div class="title">Login</div>
+			<%= render_partial 'session' %>
+		</div>
+		<div class="LargeBoxBottom"></div>
+	</div>
+
+	<div class="clear" id="RightContainerSpaceTop"></div>
+	<div class="ContentBox">
+	</div>
+</div>
+
+

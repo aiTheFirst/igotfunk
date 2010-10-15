@@ -1,0 +1,16 @@
+<% form_for :story, @story, :url => create_story_path do |story| %>
+	
+<div class="text">Name* <%= story.text_field 'name' %></div>
+<div class="text">URL* <%= story.text_field 'url' %></div>
+<div class="text">Description <%= story.text_area 'description', :cols => 55, :rows => 10 %></div>
+<div class="text">Category* <%= story.select 'story_category_id', @story_categories.collect{|c| [c.name, c.id]}, {:include_blank => true} %></div>
+
+<div class="text">
+	Tags (separated by commas)
+	<%= text_area_tag 'tags', nil, :cols => 55, :rows => 3 %>
+</div>
+
+
+<div class="text"><%= story.submit 'Save' %></div>
+	
+<% end %>

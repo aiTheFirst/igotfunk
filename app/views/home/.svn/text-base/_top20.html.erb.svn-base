@@ -1,0 +1,65 @@
+<script type="text/javascript">jQuery('.funk-o-meter').FunkOMeter();</script>
+<div class="ChartHeader"><!-- Start: Top 20 Most Funked -->
+	<div>
+		<span class="Line">
+			<% if chart_type == 'MOST_FUNKED' %>
+			TOP 20 <b>Most Funked</b>
+			<span class="TextSpace"></span>
+			<span><%= link_to_remote 'Most Viewed', 
+										:url => refresh_chart_path(:limit => 20, :chart_type => 'mostviewed'), 
+										:update => 'Top20Chart' %></span>
+			<% else %>
+			TOP 20 <b>Most Viewed</b>
+			<span class="TextSpace"></span>
+			<span><p><%= link_to_remote 'Most Funked', 
+						:url => refresh_chart_path(:limit => 20, :chart_type => 'mostfunked'), 
+						:update => 'Top20Chart' %></p></span>
+			<% end %>
+		</span>
+	</div>
+</div>
+
+<div class="ChartBody">
+	<div class="ChartInnerContent">
+		<% for story in stories %>
+		
+		<!-- Start: Row  -->						
+		
+			
+		<div class="VideoImage VideoImageCorner">
+			<span></span>
+			<div style="width:125px;height:83px;">
+				<img src="<%= thumbnail_link(story)%>" width="125" height="83">
+			</div>
+		</div>
+		
+		
+		
+		<div class="ChartStoryDetails">	
+			
+			<a href="<%= view_story_path(:name => story.url_slug) %>"><span id="eventTitle"><%= story.name %></span></a><br />
+			
+			<%= story.description %><br />
+			
+			Posted by: <label><a href="<%= view_user_path(:user_name => story.user.login) %>"><%= story.user.login %></a></label><br />
+			
+			Views: <label><%= story.views %></label><br />
+			
+			Source: <% if story.story_source.icon_filename != nil %>
+						<img src="/images/<%= story.story_source.icon_filename %>" alt="" align="absmiddle" width="37" height="15">
+					<% else %>
+						<%= story.story_source.name %>
+					<% end %>													
+		</div>
+		
+		<%= render :partial => 'rankings/funk_o_meter', :object => story, :locals => { :disabled => true}%>	
+		
+		<div class="clear"></div>
+		
+		<div class="HorizontalLine"></div>
+		<!--End : Row  -->
+		
+		<% end %>
+	</div>
+</div>
+<div class="ChartFooter"></div><!-- End: Top 20 Most Funked -->

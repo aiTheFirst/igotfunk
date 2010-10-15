@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>The web's hottest video. For you.</title>
+		
+		<%= stylesheet_link_tag 'igotfunk' %>
+		
+		<%= javascript_include_tag  :defaults %>
+		<%= javascript_include_tag "scriptaculous" %>
+	</head>
+	
+	<body>
+		<div> <!-- main blank div -->  	
+		    <div id="Navbar">	
+		    	<ul class="nav">
+			      <img src="/images/tinylogo.gif" alt="" width="180" height="70"/>      
+			      <font color="#000000"><li>______</li></font>
+			      <li><a href="">home</a></li>
+				  <li><a href="">top videos</a></li>
+				  <li><a href="">new videos</a></li>
+				  <li><%= link_to 'join', signup_path %></li>
+			      
+				  <% if logged_in? %>
+				  <li><%= link_to 'logout', logout_path %></li>
+				  <% else %>
+				  <li><%= link_to 'login', login_path %></li>
+				  <% end %>
+				  <label>
+				  <input name="search" type="text" id="search" value="Search videos..." />
+				  ch...</label>
+			    </ul>
+
+		    	<ul class="cat">
+				  <li><a href="">Categories:</a></li>
+				  <li><a href="">Fashion</a></li>
+				  <li><a href="">Lifestyle</a></li>
+			      <li><a href="">Politics</a></li>
+			      <li><a href="">Comedy</a></li>
+				  <li><a href="">Music</a></li>
+				  <li><a href="">Movies</a></li>
+			      <li><a href="">Reality</a></li>
+			      <li><a href="">Sports</a></li>
+				  <li><a href="">Business</a></li>
+				  <li><a href="">Freak</a></li>
+			      <li><a href="">Geeky</a></li>
+			      <li><a href="">Celebs</a></li>
+			      <li><a href="">Discovery</a></li>
+				</ul>
+		  	</div><!--- end Navbar-->
+		<!-- end top-->
+		
+		<% if flash[:notice] %>
+		<%= flash[:notice] %><br />
+		<% end %>
+		
+		<%= yield %>
+		
+		<% ### DELETE THIS BEFORE PRODUCTION ### %>
+		
+		Quick Dev Links: <%= link_to 'Signup', signup_path %> | 
+		<%= link_to 'Login', login_path %> | 
+		<%= link_to 'Logout', logout_path %> | 
+		<%= link_to 'New Story', new_story_path %> | 
+		
+		<% ### END DELETE ### %>
+		
+		<br />
+		
+		
+		
+		</div><!-- end main div--> 
+	</body>
+</html>

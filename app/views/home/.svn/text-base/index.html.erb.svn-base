@@ -1,0 +1,10 @@
+<div id="MainContent" class="VerticalDotLine"><!-- *** Start: MainContent ***-->
+	<div class="ContentBox" id="Top20Chart">
+		<%= 
+			render :partial => 'top20', 
+				   :locals => { :stories => @top_funked_stories,
+					 			:chart_type => 'MOST_FUNKED' }
+		%>
+		<div class="clear"></div>
+	</div>
+</div>

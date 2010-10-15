@@ -1,0 +1,56 @@
+<div id="MainContent" class="VerticalDotLine"><!-- *** Start: MainContent ***-->
+	<div class="ContentBox">
+		<div class="ContentBoxTop"></div>
+		<div class="ContentBoxBg">
+			<div class="BlogDetails">
+				<img src="/images/defaultavatar.jpg" width="121" height="127" alt=""><br />
+				<div class="BlogName"><span><%= @user.login %></span><%= status = Status.find_latest_for_user(@user.id) %></div>
+				<div class="HorizontalLine"></div>
+				
+				<% if @profile.location != nil %>
+				<div><%= @profile.location %></div>
+				<div class="HorizontalLine"></div>
+				<% end %>
+				
+				<% if @profile.gender != 'u' && @profile.birthday != nil %>
+				<div><% if @profile.gender == 'm'%>Male<% elsif @profile.gender == 'f' %>Female<% end %>, <%= calculate_age(@profile.birthday) %> </div>
+				<div class="HorizontalLine"></div>
+				<% elsif @profile.gender != 'u' %>
+				<div><% if @profile.gender == 'm'%>Male<% elsif @profile.gender == 'f' %>Female<% end %></div>
+				<div class="HorizontalLine"></div>
+				<% elsif @profile.birthday != nil%>
+				<div>22 </div>
+				<div class="HorizontalLine"></div>
+				<% end %>
+				
+				<% if @profile.website != nil %>
+				<div><%= @profile.website %></div>
+				<div class="HorizontalLine"></div>
+				<% end %>
+				
+				<div>Profile Views: <%= @profile.views %></div>
+				<div class="HorizontalLine"></div>
+			</div>
+		</div>
+		
+		<div class="ContentBoxBotShade"></div>
+		<div class="clear"></div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><!-- This br is used for bottom space -->
+	</div>			
+</div><!-- *** End: MainContent ***-->
+
+<div id="RightContainer"><!-- *** Start: RightContainer ***-->
+	<div id="RightContainerSpaceTop"></div>
+	<div id="RightContainerBoxPg">
+		<div id="BoxTop"></div>
+		<div id="BoxBg">
+			<div class="BoxBgInnerContent">
+				<span><a href="<%= edit_user_path(:user_name => @user.login) %>">Update Your Profile</a></span><br>
+				<span style="line-height:3px;"></span><br>
+				<span><a href="<%= new_story_path %>">Post a Video</a></span>
+			</div>
+		</div>
+		<div id="BoxBottomShade"></div>
+		<div class="clear"></div>
+	</div>
+</div>	<!-- *** End : RightContainer ***-->

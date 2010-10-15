@@ -1,0 +1,28 @@
+<%	tiny = disabled ? "tiny-" : "" %>	
+	
+	<div id="meter" style="float: left; position: relative; "> 
+						<div class="<%=tiny%>slider-container" > 
+							<div class="<%=tiny%>slider" id="s<%=funk_o_meter.id%>" style=""></div> 
+							<div class="<%=tiny%>slider-track" id="t<%= funk_o_meter.id%>" style="">		
+								<div class="<%=tiny%>slider-handle" id="h<%= funk_o_meter.id%>" style="">
+									<% if !disabled  then %><img src="/images/tick.png"><% end %>
+								</div> 
+							</div> 
+						</div> 
+			
+			
+						
+	</div> 
+	
+	<script type="text/javascript" language="javascript"> 
+	// <![CDATA[
+		var slider = new Control.Slider('h<%= funk_o_meter.id%>', 't<%= funk_o_meter.id%>', {
+				axis: 'vertical',
+				sliderValue: '<%= 1-(funk_o_meter.funk_level.to_f/100)%>',
+				startSpan: 's<%= funk_o_meter.id%>',
+				onSlide: function (v) {if (!<%=disabled || !logged_in?%>) {change_tooltip(v);} },
+				onChange: function(v) {  rank('<%= funk_o_meter.id%>',v); if (!<%=disabled || !logged_in?%>) {change_tooltip(v);} },
+				disabled: <%=disabled || !logged_in?%>
+			});
+	// ]]>
+	</script>

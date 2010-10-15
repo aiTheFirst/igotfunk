@@ -1,0 +1,10 @@
+<% remote_form_for :comment, 
+				   :url => create_comment_path(:story_id => @story_id), 
+				   :update => 'StoryCommentContainer', # ID of the section of the page to update
+				   :complete => "$('comment_description').value = '';" do |comment| %> 
+<div class="text">
+	Post A Comment
+	<%= comment.text_area 'description', :cols => 55, :rows => 3 %>
+</div>
+<div class="text"><%= comment.submit 'Post' %></div>
+<% end %>

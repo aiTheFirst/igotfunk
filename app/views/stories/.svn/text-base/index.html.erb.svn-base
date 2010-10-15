@@ -1,0 +1,91 @@
+<div id='tooltip' style="display:none; margin: 5px; padding: 4px; background: #f0f0f0; border: 1px dotted #c0c0c0; opacity: 0.9; z-index: 10 ;">
+  Cool
+</div>
+
+<div id="MainContent" class="VerticalDotLine"><!-- *** Start: MainContent ***-->
+	<div class="ContentBox">
+		<div class="LargeBoxTop"></div>
+		<div class="LargeBoxBg">
+			
+			<div class="title"><%= @story.name %></div>
+			
+			<div style="text-align:left;">
+				<span class="text">From :</span> 
+				<% if @story.story_source.icon_filename != nil %>
+				<img src="/images/<%= @story.story_source.icon_filename %>" alt="" align="absmiddle">
+				<% else %>
+				<%= @story.story_source.name %>
+				<% end %>
+			</div>
+		
+			<div class="text">
+				<span style="float:left;">
+					Posted by: <span style="color:#003663;"><a href="<%= view_user_path(:user_name => @username) %>"><%= @username %></a></span></span> <span style="float:right;padding-right:45px;color:#003663;"><span class="text">Posted At: </span><%= @story.created_at.strftime('%B %d, %Y') %><br><br></span></div>
+			
+			<div class="clear"></div>
+			
+			<div class="videoPlayerContainer">
+				<div class="funkbutton" id="funkbutton">
+					<%= render :partial => 'rankings/funk_o_meter', :object => @story, :locals => { :disabled => false }%>
+				</div>
+				<div class="videoPlayer">
+					<% # Display the video on the site if possible %>
+					<% if @video_code != nil %>
+					<%= @video_code %>
+					<% else %>
+					<a href="<%= @story.url %>" target="_BLANK"><img src="/images/defaultplayer.png"></a>
+					<% end %>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="text">
+				<span style="float:left;">Views : <%= @story.views %></span>
+				<span style="float:right;padding-right:30px;color:#003663;">
+					Share : 
+					
+					<!-- AddThis Button BEGIN -->
+					<script type="text/javascript">var addthis_pub="mikewoj";</script>
+					<a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+						<img src="http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/>
+					</a>
+					<script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+					<!-- AddThis Button END -->
+					
+				</span></div>
+			<div class="clear"></div>
+			<div class="text">Tags : <%= @tags %></div>
+			<div class="text" style="font-weight:normal;text-align:justify;padding:10px 30px 10px 68px;">
+				<%= @story.description %>
+				<a href="<%= @story_url %>" target="_BLANK">watch it here</a>
+			</div>
+		</div>
+		<div class="LargeBoxBottom"></div>
+	</div>
+
+	<div class="clear" id="RightContainerSpaceTop"></div>
+	<div class="ContentBox">
+		<ul id="Tab">
+			<li class="selected">Comments<% #link_to_remote 'Comments', :class => 'TabLink', :title => 'Comments' %></li>
+			<li><a class="TabLink" title="The Funkers">The Funkers</a></li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+	
+	<div class="ContentBox">
+		<div class="LargeBoxTop"></div>
+		<div class="LargeBoxBg">
+			<div class="LargeBoxInnerContent" id="StoryCommentContainer">
+				<%= render :partial => 'story_comments/index', :locals => { :comments => @story.story_comments, 
+																		   	:story_id => @story.id } %>
+			</div>
+		</div>
+		<div class="LargeBoxBottom"></div>
+		<br><br><br><br><br><br><br><br><br><br><br><!-- This br is used for dot line Extented -->
+	</div>
+</div>
+
+<script type="text/javascript">
+  var my_tooltip = new Tooltip('meter', 'tooltip');
+  change_tooltip (<%=1-(@story.funk_level.to_f/100)%>);
+</script>
+

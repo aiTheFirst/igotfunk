@@ -1,0 +1,23 @@
+<div id="MainContent" class="VerticalDotLine"><!-- *** Start: MainContent ***-->
+	<%= error_messages_for :user %>
+
+	<div class="ContentBox">
+		<div class="LargeBoxTop"></div>
+		<div class="LargeBoxBg">
+			<div class="title">Edit Profile</div>
+			<% form_for :profile, @profile, :url => update_user_path(:user_name => @user.login) do |p| -%>
+			<div class="text">Location<br /><%= p.text_field :location %></div>
+			<div class="text"><br />Website<br /><%= p.text_field :website %></div>
+			<div class="text"><br />Gender Male<%= p.radio_button :gender, 'm' %> Female<%= p.radio_button :gender, 'f' %> Unspecified<%= p.radio_button :gender, 'u' %></div>
+			<div class="text"><br />Birthday<br /><%= p.text_field :birthday %></div>
+			
+			<div class="text"><br /><%= submit_tag 'Update Profile' %></div>
+			<% end -%>
+		</div>
+		<div class="LargeBoxBottom"></div>
+	</div>
+
+	<div class="clear" id="RightContainerSpaceTop"></div>
+	<div id="ContentBox">
+	</div>
+</div>

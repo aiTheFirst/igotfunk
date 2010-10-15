@@ -1,0 +1,20 @@
+development:
+  adapter: mysql
+  database: apollo_dev
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+staging:
+  adapter: mysql
+  database: igotfunk_apollostaging
+  username: igotfunk_mike
+  password: mike
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql
+  database: igotfunk_apollostaging
+  username: igotfunk_mike
+  password: mike
+  socket: /tmp/mysql.sock

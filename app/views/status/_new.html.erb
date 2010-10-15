@@ -1,0 +1,3 @@
+<% form_for :status, @status, :url => create_status_path do |status| %>
+<%= @username %> is <%= status.text_field 'description' %> <%= status.submit 'Update' %>
+<% end %>
