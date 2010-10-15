@@ -15,8 +15,9 @@ task :staging do
   set :application, "apollo"
   set :user, "igotfunk"
   set :domain, "igotfunk.com"
-  set :repository, "svn+ssh://#{user}@igotfunk.com/home/#{user}/svn/#{application}/trunk/"
+  set :repository, "git@github.com:anthonynonso/igotfunk.git"
   set :deploy_to, "/home/#{user}/staging/public"
+  set :scm, :git
   
   role :app, domain
   role :web, domain
