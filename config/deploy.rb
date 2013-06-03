@@ -38,9 +38,9 @@ default_run_options[:pty] = true
 
 desc "Restart the web server. Overrides the default task for Site5 use"
 deploy.task :restart, :roles => :app do
-  run "cd /home/#{user}; rm -rf public_html; ln -s #{current_path}/public ./public_html"
+  run "cd /home/#{user}; ln -s #{current_path}/public ./igotfunk.com"
   run "skill -9 -u #{user} -c dispatch.fcgi"
-  run "ln -s ~/staging/public ~/public_html/staging"
+  run "ln -s ~/staging/public ~/igotfunk.com/staging"
 end
 
 deploy.task :start do 
