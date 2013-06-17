@@ -16,7 +16,8 @@ task :staging do
   set :user, "igotfunk"
   set :domain, "igotfunk.com"
   set :repository, "git@github.com:artfulgeek/igotfunk.git"
-  set :deploy_to, "/home/#{user}/staging/public"
+  #set :local_repository, '/Users/anthonynonso/igf/igotfunk.git'
+  set :deploy_to, "/home/#{user}/staging/"
   set :scm, :git
   
   role :app, domain
@@ -38,9 +39,11 @@ default_run_options[:pty] = true
 
 desc "Restart the web server. Overrides the default task for Site5 use"
 deploy.task :restart, :roles => :app do
-  run "cd /home/#{user}; ln -s #{current_path}/public ./igotfunk.com"
+  #run "cd /home/#{user}; ln -s #{current_path}/public ./igotfunk.com"
+  run "cd /home/#{user}; ln -s #{current_path} ~/igotfunk.com"
   run "skill -9 -u #{user} -c dispatch.fcgi"
-  run "ln -s ~/staging/public ~/igotfunk.com/staging"
+  #run "ln -s ~/staging/public ~/igotfunk.com/staging"
+  run "ln -s ~/staging ~/igotfunk.com"
 end
 
 deploy.task :start do 
@@ -49,5 +52,6 @@ end
 task :after_update_code do
   #run "rm -rf /home/igotfunk/public_html/staging/apollo/current/config/database.yml"
   
-  run "ln -nfs #{deploy_to}/#{shared_dir}/public/.htaccess #{release_path}/public/.htaccess"
+  #run "ln -nfs #{deploy_to}/#{shared_dir}/public/.htaccess #{release_path}/public/.htaccess"
+  run "ln -nfs #{deploy_to}/#{shared_dir}/.htaccess #{release_path}/.htaccess"
 end
